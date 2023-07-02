@@ -40,6 +40,7 @@ Si vas a copiar un link de esta página, usá este link http://guidetomastodon.c
 * [Le adjunté una foto a mi toot. ¿Qué es eso de 'marcar como sensible'?](#le-adjunté-una-foto-a-mi-toot-qué-es-eso-de-marcar-como-sensible)
 * [Le adjunté una foto a mi toot. ¿Qué es ese botón de editar?](#le-adjunté-una-foto-a-mi-toot-qué-es-ese-botón-de-editar)
 * [¿Por qué debería agregarle un texto alternativo a mi foto?](#por-qué-debería-agregarle-un-texto-alternativo-a-mi-foto)
+* [¿Cómo uso los emojis personalizados de mi servidor?](#cómo-uso-los-emojis-personalizados-de-mi-servidor)
 * [¿Cómo es que mi amigo en otra instancia puede usar este emoji y yo no puedo?](#cómo-es-que-mi-amigo-en-otra-instancia-puede-usar-este-emoji-y-yo-no-puedo)
 * [¿Por qué no puedo buscar una palabra o frase específica?](#por-qué-no-puedo-buscar-una-palabra-o-frase-específica)
 * [¿Por qué no puedo citar un toot?](#por-qué-no-puedo-citar-un-toot)
@@ -65,7 +66,7 @@ El nombre Mastodon viene de [la banda de metal de ese nombre](https://www.mastod
 
 Allí escribís estados relativamente cortos, y podés ver una lista en constante actualización de los estados de la gente que seguís. Podés tener la notificaciones (respuestas, republicaciones, favoritos, DMs) en una columna separada.
 
-Así como los estados en Twitter se llaman "tweets", los de Mastodon se llaman "toots". Un toot puede tener como mucho 500 caracteres.
+Así como los estados en Twitter se llaman "tweets", los de Mastodon se llaman "toots". Un toot puede tener como mucho 500 caracteres - o más, dependiendo de la configuración de tu servidor.
 
 Mastodon también soporta hashtags, que son palabras con el prefijo #, como por ejemplo "#software" or "#introduccion". Podés hacer click en un hashtag para buscar otros toots que tienen ese tag.
 
@@ -81,13 +82,17 @@ Podés crearte cuentas en varias instancias si lo que querés es hablar de cosas
 
 ## ¿Y qué tiene de distinto con ambas; o mejor dicho, qué son las Lineas de tiempo locales y federadas?
 
-:bangbang: Mastodon tiene dos lineas de tiempo adicionales que podés ver: la Linea de tiempo local y la Linea de tiempo federada.
+:bangbang: Mastodon tiene lineas de tiempo que podés ver más allá de las que podrías conocer de Twitter: la Linea de tiempo local y la Linea de tiempo federada.
+
+Mastodon arranca con la linea de tiempo **de inicio**, la cual es mas o menos equivalente a la de "Últimos tweets" en Twitter. Esto contiene los posteos que hiciste, los que hicieron gente que vos seguís, los que la gente que vos seguís compartió y los posteos de cualquier hashtag que estás siguiendo. También hay una linea de tiempo de **Notificaciones**. Por defecto, te muestra todas las veces que alguien haya interactuado con algun posteo tuyo; hay un botón de desplazamiento arriba de la columna que podés usar para filtrar tus notificaciones (favoritos, retooteos, respuestas, etc.) y cuales ver en la columna. También podés configurar para que solo muestre menciones - cada vez que alguien te arroba en un posteo.
 
 La Linea de tiempo local se hace con todos los posteos de estado público escritos por los usuarios de tu instancia, salvo las respuestas. (Una respuesta se refiere solo a los toots posteados en respuesta a otro toot - ¡NO a cualquier toot que sólo mencione a otro usuario!)
 
 La Linea de tiempo federada se hace con todos los posteos de estado público escritos por cualquier usuario del cual tu instancia tenga conocimiento, incluso de otras instancias. Tu instancia conoce a un usuario remoto si al menos un usuario de tu instancia lo haya seguido ALGUNA vez.
 
 Las Lineas de tiempo locales y federadas pueden a veces ser chorros de mucha información de lo rápido que van. ¡Ten cuidado!
+
+A menos que haya un "Hipo en el servidor", **todas las lineas de tiempo en Mastodon tienen un orden cronológico inverso**. Si ves posteos fuera de orden, no significa que haya un algoritmo en medio; significa que tu servidor recibió los posteos fuera dde orden.
 
 ## ¿Qué es el Fediverso?
 
@@ -129,7 +134,7 @@ Una instancia de Mastodon que permita eso contendrá las instrucciones en la pá
 
 Las mayúsculas son a propósito.
 
-Elegir una instancia puede ser difícil. Muchas instancias tienen un enfoque específico: `loa.masto.host` es un espacio seguro para gente LGTB+, `infosec.exchange` es un espacio para quienes les gusta la seguridad informática, `mastodont.cat` fue hecha para quienes hablan catalán, y `botsin.space` se enfoca en el desarrollo y alojamiento de bots automatizados. En `oulipo.social` no se permite escribir un toot que incluya la letra "e". 
+Elegir una instancia puede ser difícil. Muchas instancias tienen un enfoque específico: `infosec.exchange` es un espacio para quienes les gusta la seguridad informática, `mastodont.cat` fue hecha para quienes hablan catalán, `mastorol.es` es para los amantes de los juegos de rol y de mesa, `botsin.space` se enfoca en el desarrollo y alojamiento de bots automatizados. En `oulipo.social` no se permite escribir un toot que incluya la letra "e". 
 
 Si no te creaste una cuenta en mastodon todavía, te podría ser útil probar en una de las instancias más grandes, como `mastodon.social` - la instancia principal, con más de 100.000 usuarios activos - o `mas.to` . Estas instancias tienen una población enorme y generalmente amigable que te ayudarán a encontrar una instancia más de nicho si eso es lo que estás buscando. Sin embargo, cuidado, porque debido a su tamaño, las lineas de tiempo locales en esas instancias pueden moverse *muy* rápido.
 
@@ -214,6 +219,8 @@ Por defecto, no te llegarán notificaciones sobre las acciones que los moderador
 * Las **respuestas** son toots que son respuestas a los toots de otra perona *o respuestas a una respuesta de otra persona*. **Por ejemplo:** Hacés click en el botón de respuesta del toot de otra persona para responderle, **o** hacés click en el botón de respuesta de un toot tuyo que sea la respuesta a un toot de otra persona.
 
 [Aquí](replies.png) tenés un diagrama para ver mejor (es un link porque es una imagen grande). Vas a ver que apenas entre en la cadena un toot de otra persona, tus respuestas dejan de ser autorespuestas. Esto es importante, porque las autorespuestas y las respuestas funcionan distinto en las lineas de tiempo de tus seguidores.
+
+Si hacés click en un toot, lo verás en una especie de "vista de árbol"; vas a ver todos los ancestros directos del post, y todas las respuestas al post (y cualquier respuesta a esas respuestas, etc.). Esto es bueno para enfocarse en las respuestas a un solo toot, pero si querés ver toda la discusión, entonces desplazate hacia arriba, donde está el primer toot, y hacé click ahí; eso te mostrará todas las respuestas al primer toot en la cadena, luego las respuestas a esos posts y así sucesivamente. Es probable que no puedas ver el primer toot por varias razones; en ese caso podés seleccionar el menú `...` que hay en un toot y luego seleccionar "Abrir página original" arriba, y eso abrirá una nueva pestaña en el navegador con el árbol de conversación; y ahí podés leer todo. (Desafortunadamente, no parece haber una manera de ver las conversaciones en una verdadera vista de árbol.)
 
 ## ¿Cómo funciona la configuración de privacidad?
 
@@ -350,9 +357,13 @@ Hay gente en Mastodon que tiene discapacidad visual y usan lectores de pantalla.
 
 También podés usar los textos alternativos para agregar chistes extra (como ocurre con los webcomics) o dar un comentario adicional a la imagen. Aprovechá que las descripciones tienen su propio límite de caracteres y escribí lo que quieres.
 
+## ¿Cómo uso los emojis personalizados de mi servidor?
+
+Podés insertar un emoji que tu servidor haya añadido escribiendo su nombre entre dos puntos, así: `:blobheart:`. Si escribís dos puntos (`:`) y empezás a escribir inmediatamente despues de los dos puntos, sin espacios, Mastodón te va a sugerir los emojis para que los uses. También podés seleccionarlos directamente; arriba a la derecha del cuadrito de los toots hay un emoji (el de la cara riendo con lágrimas) y si hacés click en el, te aparece un menú con todos los emojis disponibles para usar.
+
 ## ¿Cómo es que mi amigo en otra instancia puede usar este emoji y yo no puedo?
 
-:bangbang: :bangbang: Cada instancia puede definir emojis personalizados para que sus usuarios los usen, y muchas lo han aprovechado. El administrador de tu instancia puede copiar los emojis que le gustan desde otras instancias. Si ves un emoji que te gusta y no está disponible en tu instancia, pedíle a tu administrador que lo copie para allí.
+:bangbang: Cada instancia puede definir emojis personalizados para que sus usuarios los usen, y muchas lo han aprovechado. El administrador de tu instancia puede copiar los emojis que le gustan desde otras instancias. Si ves un emoji que te gusta y no está disponible en tu instancia, pedíle a tu administrador que lo copie para allí. [iliana etaoin](https://iliana.fyi) hizo un [buscador de emojis personalizados](https://emojos.in/) así podés ver cuales tenés disponibles.
 
 ## ¿Por qué no puedo buscar una palabra o frase específica?
 
@@ -393,7 +404,7 @@ No hay reglas estrictas para todos, y (como se mencionó antes) diferentes insta
 
 ## Me gusta Mastodon pero prefiero la apariencia de Twitter.
 
-Podrías aprovechar a usar [Pinafore](https://pinafore.social/), una interfaz para Mastodon hecha por [Nolan Lawson](https://toot.cafe/@nolan).
+Podrías aprovechar a usar [Pinafore](https://pinafore.social/), una interfaz para Mastodon hecha por [Nolan Lawson](https://toot.cafe/@nolan). Sin embargo, Nolan (en enero del 2023) decidió dejar de dar soporte a Pinafore; el sitio web sigue funcionando, pero ya no va a ser actualizado a medida que Mastodon crezca y cambie.
 
 [Halcyon](https://notabug.org/halcyon-suite/halcyon) es u cliente web para Mastodon que replica la interfaz de Twitter. Como Halcyon en sí es software libre y de código abierto, hay [varios servidores que lo usan](https://notabug.org/halcyon-suite/halcyon#instances); podés elegir el que quieras. Usas tu cuenta de Mastodon cuando usas Halcyon; por ejemplo, si tenés cuenta en elekk.xyz, podés usar `tucuenta@elekk.xyz` y la contraseña de allí para loguearte.
 
